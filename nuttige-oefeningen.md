@@ -1,0 +1,2 @@
++ LinkedListHashSet
+    - mét documentatie
