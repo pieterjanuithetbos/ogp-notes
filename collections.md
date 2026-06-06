@@ -1,27 +1,41 @@
 ## List, sets and maps
 
 
-1. lists
+### Lists
     - ArrayList
-        + mutable
-        +
 
     - LinkedList
-        + mutable
-        +
+     
+A linkedList supports methods: 
+- add, remove, get(index), stream(), size, contains(). 
 
-       
+The node class:
+
             private class Node() {
+                private Node previous;
+                private Node next;
+                private Object element;
             }
 
-2. sets
 
-_HashSet_: partition the set using a _hash function_. Store each partition using another Set implementation: _ArraySet_
+**What is the _sentinel_ used for?** --> it is used to mark the (beginning | end) of a list, but doesn't store anything else. 
 
+### Sets
 
-3. maps
+_HashSet_: partition the set using a _hash function_. Store each partition using another Set implementation: _ArraySet_. Supported methods:
++ `toArray`, 
++ `contains`, 
++ add, remove.
 
-Very analogous to set.
+### Maps
+
+Very analogous to implementation of sets. `Arraylist` is used to represent the Map using Entries. Supported methods:
+
++ `entrySet`, met voor elke entry:
+    -` getKey()`
+    - `getValue()`
++ put, remove
++ getBucket
 
 ## Java Collections framework
  
@@ -46,6 +60,10 @@ Alternatives using *views*:
 + `Objects.equals(o1, o2)`
 + `my... .equals(your...)`
 
-Other notable data structures:
 
-Very interesting ...
+## Arrays
+bv. `char[]`
+
+Of these datatypes, we can build arrays.
+
+                byte[] byteArray = {10, 20, 30, 40, 50};

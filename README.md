@@ -5,6 +5,7 @@ Voor verdere lectuur: zie
 + uitleg over [_nesting class-level and package-level abstractions_](nesting.md)
 + [Lists, sets, Maps and the Java Collections framework](collections.md)
 
+## Veelgemaakte fouten
 To represent an empty collection, use an empty collection object. An object obtained using new ArrayList<Person>() or new HashSet<Person>() initially stores an empty collection of Person objects.
 
 
@@ -24,8 +25,8 @@ To represent an empty collection, use an empty collection object. An object obta
 + immutable and _final_
 + provides `equals, toString, hashCode`
 
-### enum classes
-are a _closed_ type. It is impossible to make other instances of the class.
+### Enum classes
+Enum classes are a _closed_ type. It is impossible to make other instances of the class.
 
 
         public String getScoreInFrench(Score score) {
@@ -40,9 +41,9 @@ are a _closed_ type. It is impossible to make other instances of the class.
 
 ## Iterators en Iterables
 
-Onthoud goed: de moederklasse implements `Iterable`, een een geneste private klasse kan `Iterator` implementeren.
-
+Onthoud goed: de moederklasse implements `Iterable`, een een geneste private klasse kan `Iterator` implementeren. 
 `forEach()`wordt opgeroepen op een Iterable.
+`Iterator` en `Consumer` hebben een eigen klasse nodig. `Iterable` niet per se, als het alleen om `forEach` gaat.
 
 ### Generics
 Iterators en Iterables zorgen voor abstractie over verschillende implementaties van iterators en iterables.
@@ -59,12 +60,15 @@ maar
 
 
 Dat komt door erasure.
+
 1. @compiletime worden alle T's vervangen door de constraint. Als er geen constraint is, wordt alles vervangen door `Object`.
 2. Bij het doorgeven van een wildcard ? check je enkel dat het object een `NietLegeLijst` was en niet welke objecten het herbergde. Bij `T` wil de compiler dat wel proberen achterhalen, maar lukt dat niet omdat het type weggevaagd is.
 3. ` .<T>accept`: garandeert dat de invoer van method accept van type T is.
 4. wildcards. 
     - zo algemeen mogelijk: gebruik een _lower bounded wildcard_ : `? super T`
     - specifieker: `? extends T`
+
+
 ### Lamdba-expressies
 
 
@@ -76,6 +80,7 @@ Daarom krijgt `Consumer` een aparte klasse.
 
 ## Streams
 - `collect`
+
     
         .collect(Collectors.toList());
         .collect(StringBuilder::new, (x, y) -> x.append(y),
@@ -98,7 +103,7 @@ Om enkele zaken op een rijtje te zetten:
 
     String 	substring(int beginIndex)
 
-Returns a string that is a substring of this string.
+Returns a string that is a substring of this string. Strings are **immutable**.
 
 ## Datatypes
 
