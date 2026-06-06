@@ -3,15 +3,39 @@
 Voor verdere lectuur: zie 
 + een bestandje over [shortcuts](shortcuts.md)
 + uitleg over [_nesting class-level and package-level abstractions_](nesting.md)
++ [Lists, sets, Maps and the Java Collections framework](collections.md)
 
+To represent an empty collection, use an empty collection object. An object obtained using new ArrayList<Person>() or new HashSet<Person>() initially stores an empty collection of Person objects.
+
+
+    public class Team {
+         private Set<Student> members = new HashSet<Student>();
+         public void addMember(Student student) {
+         members.add(student);
+         student.team = this;
+          }
+    }
 
 ## Dynamic binding
-Record classes: 
+### Record classes: 
 
     public record Point(int x, int y) {}
 
 + immutable and _final_
-+ provide `equals, toString, hashCode`
++ provides `equals, toString, hashCode`
+
+### enum classes
+are a _closed_ type. It is impossible to make other instances of the class.
+
+
+        public String getScoreInFrench(Score score) {
+    switch (score) {
+        case LOVE -> { return "zéro"; }
+        case FIFTEEN -> { return "quinze"; }
+        case THIRTY -> { return "trente"; }
+        default -> { return "quarante"; }
+    }
+}
 
 
 ## Iterators en Iterables
@@ -76,6 +100,11 @@ Om enkele zaken op een rijtje te zetten:
 
 Returns a string that is a substring of this string.
 
+## Datatypes
 
-
+datatypes in java: byte, int, long, double, boolean, char, short, float.
+- where `char` is mostly used to represent charachters (eg via Unicode)
+- mind arithmetic overflow
+- `... .POSITIVE_INFINITY`
+- mind implicit rouding on floats
 
