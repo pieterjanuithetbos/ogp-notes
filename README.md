@@ -4,6 +4,9 @@ Voor verdere lectuur: zie
 + een bestandje over [shortcuts](shortcuts.md)
 + uitleg over [_nesting class-level and package-level abstractions_](nesting.md)
 + [Lists, sets, Maps and the Java Collections framework](collections.md)
++ lering uit de examens:
+    - [augustus 2025](lering-examen-aug-2025.md)
+.md
 
 ## Veelgemaakte fouten
 To represent an empty collection, use an empty collection object. An object obtained using new ArrayList<Person>() or new HashSet<Person>() initially stores an empty collection of Person objects.
@@ -29,14 +32,14 @@ To represent an empty collection, use an empty collection object. An object obta
 Enum classes are a _closed_ type. It is impossible to make other instances of the class.
 
 
-        public String getScoreInFrench(Score score) {
-    switch (score) {
+    public String getScoreInFrench(Score score) {
+     switch (score) {
         case LOVE -> { return "zéro"; }
         case FIFTEEN -> { return "quinze"; }
         case THIRTY -> { return "trente"; }
         default -> { return "quarante"; }
+         }
     }
-}
 
 
 ## Iterators en Iterables
@@ -105,6 +108,16 @@ Om enkele zaken op een rijtje te zetten:
 
 Returns a string that is a substring of this string. Strings are **immutable**.
 
+### Copying representation Objects
+
+A first way of doing it is using **clone()**. It is inherited from `Object`, but cannot be used on abstract types.
+
+Immutable copies can be made through:
++ List, Set, Map.copyOf()
+
+When to use the `copy()` method??
+    --> (volgens Gemini) een copy is vaak handmatig gemaakt, terwijl `clone()` ingebouwde Java-syntax is. 
+
 ## Datatypes
 
 datatypes in java: byte, int, long, double, boolean, char, short, float.
@@ -125,3 +138,7 @@ The second one is either absent, or can be:
 
 
 To finish: a `default` method is fully implemented inside the interface. Is is the opposite of  `abstract` (and in some sense similar to `static`).
+
+## Documentatie en meer
+        
+        SpecUtil.containsDuplicateObjects()

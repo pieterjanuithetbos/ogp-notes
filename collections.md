@@ -1,5 +1,6 @@
 ## List, sets and maps
 
+I do not see an efficient way of making a mutable copy of Lists, Sets and maps. You could however try to **iterate** through the collection:
 
 ### Lists
     - ArrayList
@@ -36,6 +37,7 @@ Very analogous to implementation of sets. `Arraylist` is used to represent the M
     - `getValue()`
 + put, remove
 + getBucket
++ `values()`
 
 ## Java Collections framework
  
@@ -67,3 +69,10 @@ bv. `char[]`
 Of these datatypes, we can build arrays.
 
                 byte[] byteArray = {10, 20, 30, 40, 50};
+
+
+Arrays kan je aanpassen door bv.
+
+                byteArray[2] = 20;
+
+                Maps:
