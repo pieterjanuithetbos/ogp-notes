@@ -1,5 +1,7 @@
 # Lering examen augustus 2025a
 
+> Zie de *vijr* soorten representation exposure!
+
 + pas op met **deep copy vs shallow copy**! Bij een deep copy itereer je over het object en kopieer je het. Beter te veel kopiëren dan te weinig!
 
 + Groepeer zoveel mogelijk in de superklassen, bv. :

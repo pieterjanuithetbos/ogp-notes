@@ -7,11 +7,15 @@ Voor verdere lectuur: zie
 + lering uit de examens:
     - [augustus 2025](lering-examen-aug-2025.md)
 .md
++ Dynamic binding
+    - [record classes](record-classes)
+    - [enum classes](enum-classes)
 
 ## Veelgemaakte fouten
-To represent an empty collection, use an empty collection object. An object obtained using new ArrayList<Person>() or new HashSet<Person>() initially stores an empty collection of Person objects.
+1. To represent an empty collection, use an empty collection object. An object obtained using new ArrayList<Person>() or new HashSet<Person>() initially stores an empty collection of Person objects.
 
-
+2. ??
+```
     public class Team {
          private Set<Student> members = new HashSet<Student>();
          public void addMember(Student student) {
@@ -19,9 +23,10 @@ To represent an empty collection, use an empty collection object. An object obta
          student.team = this;
           }
     }
+```
 
 ## Dynamic binding
-### Record classes: 
+### Record classes 
 
     public record Point(int x, int y) {}
 
@@ -44,13 +49,13 @@ Enum classes are a _closed_ type. It is impossible to make other instances of th
 
 ## Iterators en Iterables
 
-Onthoud goed: de moederklasse implements `Iterable`, een een geneste private klasse kan `Iterator` implementeren. 
-`forEach()`wordt opgeroepen op een Iterable.
-`Iterator` en `Consumer` hebben een eigen klasse nodig. `Iterable` niet per se, als het alleen om `forEach` gaat.
+- Onthoud goed: de moederklasse implements `Iterable`, een een geneste private klasse kan `Iterator` implementeren. 
+- `forEach()`wordt opgeroepen op een Iterable.
+- `Iterator` en `Consumer` hebben een eigen klasse nodig. `Iterable` niet per se, als het alleen om `forEach` gaat.
 
 ### Generics
-Iterators en Iterables zorgen voor abstractie over verschillende implementaties van iterators en iterables.
-Voor abstractie over eenzelfde implementatie, gebruiken we generics.
+- Iterators en Iterables zorgen voor abstractie over verschillende implementaties van iterators en iterables.
+- Voor abstractie over eenzelfde implementatie, gebruiken we generics.
 Dat noemt met *subtype polymorphism*.
 
 Doe niet 
@@ -62,7 +67,7 @@ maar
 		return kop == ((NietLegeLijst<T>) obj).kop && Objects.equals(staart,  ((NietLegeLijst<?>) obj).staart);
 
 
-Dat komt door erasure.
+Dat komt door **erasure**.
 
 1. @compiletime worden alle T's vervangen door de constraint. Als er geen constraint is, wordt alles vervangen door `Object`.
 2. Bij het doorgeven van een wildcard ? check je enkel dat het object een `NietLegeLijst` was en niet welke objecten het herbergde. Bij `T` wil de compiler dat wel proberen achterhalen, maar lukt dat niet omdat het type weggevaagd is.
