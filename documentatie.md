@@ -37,3 +37,6 @@ Procedure voor het definiëren van een data-abstractie:
    2.4. Implementeer de constructoren en mutatoren.
 
 
+## Handige functies bij documentatie
+
+        SpecUtil.containsDuplicateObjects()
