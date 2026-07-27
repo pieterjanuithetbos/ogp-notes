@@ -10,6 +10,8 @@ Voor verdere lectuur: zie
 + Dynamic binding
     - [record classes](record-classes)
     - [enum classes](enum-classes)
++ [documentatie](documentatie.md)
++ [praktische zaken](praktische-zaken.md)
 
 ## Veelgemaakte fouten
 1. To represent an empty collection, use an empty collection object. An object obtained using new ArrayList<Person>() or new HashSet<Person>() initially stores an empty collection of Person objects.
