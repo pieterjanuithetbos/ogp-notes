@@ -1,5 +1,3 @@
-# Notities OGP
-
 + een bestandje over [shortcuts](shortcuts.md)
 + uitleg over [_nesting class-level and package-level abstractions_](nesting.md)
 + [Lists, sets, Maps and the Java Collections framework](collections.md)
