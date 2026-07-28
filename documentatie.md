@@ -1,9 +1,15 @@
 # Documentatiegids
 
-- voorwaarden op input
-- wat gebeurt er met input? (= `mutates`, `inspects`)
+API definiëren: 
+- voorwaarden op input of state (bij `void`-methods)
+- wat gebeurt er met input? (= `@mutates`, `@inspects`)
+- wat gebeurt er met this, hoe komt de output tot stand? (= `@creates`)
 - voorwaarden op output
-- wat gebeurt er met output? (= `creates`)
+
+invarianten schrijven: 
+- is het een `representationObject`?
+- is het een `peerObject`? 
+- Wat kan ik zeggen over het object **zelf** (eventueel door andere methodes te gebruiken)
 
 Procedure voor het definiëren van een data-abstractie:
 
@@ -40,3 +46,5 @@ Procedure voor het definiëren van een data-abstractie:
 ## Handige functies bij documentatie
 
         SpecUtil.containsDuplicateObjects()
+
+        old(this).method()

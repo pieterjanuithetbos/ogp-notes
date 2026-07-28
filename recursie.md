@@ -1,0 +1,7 @@
+# Recursie
+
+
+## LinkedList
+
+
+

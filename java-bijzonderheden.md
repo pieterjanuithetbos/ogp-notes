@@ -1,10 +1,15 @@
+# Java-bijzonderheden
+
+
+## Syntax 
+
 - `%` rest bij deling door
 - `/` deling, afgerond naar beneden
 
 
-## Syntax and more
+`IntStream.range(int StartInclusive, int EndExclive)` merk op: exclusief het einde!
 
-    String 	substring(int beginIndex)
+        String 	substring(int beginIndex)
 
 Returns a string that is a substring of this string. Strings are **immutable**.
 

@@ -12,4 +12,10 @@
 + [generics](generics.md)
 + [streams](streams.md)
 + [datatypes](datatypes.md)
++ [recursie](recursie.md)
++ [arrays](arrays.md)
++ [to representation object or not?](representation-object.md)
++ [representation exposure](repr-exp.md)
++ [geneste klassen](geneste-klassen.md)
++ [enkele oefeningen](enkele-oefeningen.md)
 
