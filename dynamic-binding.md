@@ -7,9 +7,11 @@
 + provides `equals, toString, hashCode`
 
 ### Enum classes
-Enum classes are a _closed_ type. It is impossible to make other instances of the class.
+- use the switch-statement,
+- enum classes are a _closed_ type. It is impossible to make other instances of the class.
+an example: 
 
-
+```
     public String getScoreInFrench(Score score) {
      switch (score) {
         case LOVE -> { return "zéro"; }
@@ -18,4 +20,4 @@ Enum classes are a _closed_ type. It is impossible to make other instances of th
         default -> { return "quarante"; }
          }
     }
-
+```

@@ -3,9 +3,6 @@
 + [Lists, sets, Maps and the Java Collections framework](collections.md)
 + lering uit de examens:
     - [augustus 2025](lering-examen-aug-2025.md)
-+ dynamic binding
-    - [record classes](record-classes)
-    - [enum classes](enum-classes)
 + [documentatie](documentatie.md)
 + [praktische zaken](praktische-zaken.md)
 + [java bijzonderheden](java-bijzonderheden.md)
