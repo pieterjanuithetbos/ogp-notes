@@ -1,4 +1,11 @@
-## Streams
+# Streams
+
+## Enkele nuttige methodes
+
+- geneste structuren uitvlakken: [`flatMap`](flatmap.md)
+    - mapt een object op een **stream**
+
+
 - `collect`
 
     

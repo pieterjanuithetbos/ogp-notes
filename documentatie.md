@@ -4,7 +4,9 @@ API definiëren:
 - voorwaarden op input of state (bij `void`-methods)
 - wat gebeurt er met input? (= `@mutates`, `@inspects`)
 - wat gebeurt er met this, hoe komt de output tot stand? (= `@creates`)
-- voorwaarden op output
+- voorwaarden op output (kan de output `null` zijn?). Zeg misschien iets over de ...
+    -  dimensie
+    -  inhoud
 
 invarianten schrijven: 
 - is het een `representationObject`?
@@ -23,10 +25,7 @@ Procedure voor het definiëren van een data-abstractie:
         (= definieer de geldige abstractetoestandsruimte)
     4. Documenteer de constructoren en mutatoren
 
-2. Testen
-    - splits scherm en test de documentatie
-    - **één test per regel is genoeg!**
-
+2. [Testen](testen.md)
 3. Definieer de implementatie
    1. Definieer de velden (= attributen)
         (= de rauwe concretetoestandsruimte)
@@ -48,3 +47,6 @@ Procedure voor het definiëren van een data-abstractie:
         SpecUtil.containsDuplicateObjects()
 
         old(this).method()
+
+## Bijzonderheden
+

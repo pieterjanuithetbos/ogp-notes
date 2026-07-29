@@ -4,14 +4,17 @@
 
 
 ## Aanmaken
-met `{}`
-
+- met `{}`
+```
     String[] object = {"test", "one", "two"}
-
+```
 of met `new`
-
+```
     String[] object = new String[] {"test"}
     String[] object = new String[5] 
+```
+- er is een verschil tussen `int[][]` en `Integer[][]`
+
 
 
 ## Kopiëren
@@ -19,10 +22,19 @@ of met `new`
     - is een shallow copy
 - met `Arrays.copyof(T[] original, int newLength)`
 
-
-
 ## Geneste arrays
-- lengte berekenen
+- lengte berekenen: 
+    
+    aantal rijen: `array.length`
+    aantal kolommen: `array[0].length`
+
+- merk op: bv. `@creates`, wordt `@creates | result, ...result`
+- een geneste array aanmaken:
+
+        double[][] new  = new double[][] {
+                {1, 2},
+                {4, 5},
+            }
 
 ## Bewerkingen
 - Kan je twee arrays optellen?
@@ -34,11 +46,13 @@ Erg interessant is de `Arrays`-library:
 - `copyOf()`
 - `stream()`
 - `toString()`
+- `equals()`
+- (eventueel) `deepEquals`
 
 
-
-## Documentatie
-### Gebruik `assertArrayEquals`
+## Testen
+Gebruik `assertArrayEquals`. 
+Werkt ook voor geneste arrays.
 werkt wel:
 
 		assertArrayEquals(new int[] {1, 2}, test1.getAll());
