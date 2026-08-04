@@ -22,6 +22,13 @@ of met `new`
     - is een shallow copy
 - met `Arrays.copyof(T[] original, int newLength)`
 
+- `System.arraycopy()`, with parameters:
+    - `src` the source array.
+    - `srcPos` starting position in the source array.
+    - `dest` the destination array.
+    - `destPos` starting position in the destination data.
+    - `length` the number of array elements to be copied
+
 ## Geneste arrays
 - lengte berekenen: 
     
@@ -45,7 +52,7 @@ Erg interessant is de `Arrays`-library:
 
 - `copyOf()`
 - `stream()`
-- `toString()`
+- gebruik niet `toString()`, maar `Arrays.toString(toArray())`
 - `equals()`
 - (eventueel) `deepEquals`
 

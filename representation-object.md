@@ -1,8 +1,8 @@
 # Representation object
 
+vuistregel: kijk naar het return type en naar wijzigbare input-objecten
 
 ## Wanneer label ik een veld als een representation object?
-
 
 
 

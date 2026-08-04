@@ -1,3 +1,4 @@
++ [samenvatting](samenvatting.md)
 + een bestandje over [shortcuts](shortcuts.md)
 + uitleg over [_nesting class-level and package-level abstractions_](nesting.md)
 + [Lists, sets, Maps and the Java Collections framework](collections.md)
@@ -18,4 +19,5 @@
 + [representation exposure](repr-exp.md)
 + [geneste klassen](geneste-klassen.md)
 + [enkele oefeningen](enkele-oefeningen.md)
+
 
