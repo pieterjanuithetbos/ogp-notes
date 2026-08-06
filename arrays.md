@@ -50,7 +50,7 @@ of met `new`
 ## Interessante methodes
 Erg interessant is de `Arrays`-library:
 
-- `copyOf()`
+- `copyOf(original, size)`
 - `stream()`
 - gebruik niet `toString()`, maar `Arrays.toString(toArray())`
 - `equals()`

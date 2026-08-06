@@ -1,12 +1,17 @@
 # Documentatiegids
 
 API definiëren: 
-- voorwaarden op input of state (bij `void`-methods)
-- wat gebeurt er met input? (= `@mutates`, `@inspects`)
-- wat gebeurt er met this, hoe komt de output tot stand? (= `@creates`)
-- voorwaarden op output (kan de output `null` zijn?). Zeg misschien iets over de ...
+1. voorwaarden op input of this
+2. wat gebeurt er met input? (= `@mutates`, `@inspects`)
+3. wat gebeurt er met this, hoe komt de output tot stand? (= `@mutates`, `@creates`)
+4. voorwaarden op output (kan de output `null` zijn?). Zeg misschien iets over de ...
     -  dimensie
     -  inhoud
+5. voorwaarden die de consistentie van de bidirectionele associatie garanderen (de basisvoorwaarden kan je bovenaan de klasse groeperen)
+
+extra's:
+    - bij het definiëren van de velden: welke verdienen een `@representationObject`-tag?
+    - de invariant die consistentie van de bidirectionele associatie van een meerklassige graafabstractie waarborgt, wordt meestal bovenaan de klasse gedefinieerd.
 
 invarianten schrijven: 
 - is het een `representationObject`?

@@ -7,3 +7,5 @@
 4. ga met een stream na dat een array geen duplicaten bevat.
 5. schrijf een postconditie voor `void remove(Object value)` die in één lijn het gedrag beschrijft
 6. schrijf functies `addNodes(Set set)` en `getNodes()` voor de klasse Node, die respectievelijk alle nodes van een gelinkte lijst aan een set toevoegen, en een alle nodes van een gelinkte lijst in een set teruggeven.
+7. druk uit dat een arraydeque bestaat uit twee soorten elementen: de zinvolle en de null-elementen.
+8. implementeer in Arraydeque een methode die een element op een willekeurige index toevoegt.

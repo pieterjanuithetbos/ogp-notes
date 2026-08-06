@@ -1,5 +1,6 @@
 ## Veelgemaakte fouten
-1. To represent an empty collection, use an empty collection object. An object obtained using new ArrayList<Person>() or new HashSet<Person>() initially stores an empty collection of Person objects.
+1. Fout: null gebruiken om een lege verzameling weer te geven
+> To represent an empty collection, use an empty collection object. An object obtained using new ArrayList<Person>() or new HashSet<Person>() initially stores an empty collection of Person objects.
 
 2. ??
 ```
